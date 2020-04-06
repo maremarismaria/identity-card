@@ -21,7 +21,6 @@ module.exports = {
       name: 'Codepen',
       url: 'https://codepen.io/maremarismaria',
     },
-    ,
     {
       icon: 'fa-code',
       name: 'Porfolio',
@@ -31,16 +30,6 @@ module.exports = {
       icon: 'fa-github',
       name: 'Github',
       url: 'https://github.com/maremarismaria',
-    },
-    {
-      icon: 'fa-twitter',
-      name: 'Twitter',
-      url: 'https://twitter.com/maremarismaria',
-    },
-    {
-      icon: 'fa-instagram',
-      name: 'Instagram',
-      url: 'https://www.instagram.com/maremarismaria',
     },
   ],
 };
