@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Gatsby Starter Identity', // <title>
+  siteTitle: 'María Morales', // <title>
   manifestName: 'Identity',
   manifestShortName: 'Landing', // max 12 characters
   manifestStartUrl: '/',
@@ -7,30 +7,40 @@ module.exports = {
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/gatsby-starter-identity/`, // This path is subpath of your hosting https://domain/portfolio
-  authorName: 'Anubhav Srivastava',
-  heading: 'Web Developer',
+  authorName: 'María Morales',
+  heading: 'Front-End Developer',
   // social
   socialLinks: [
     {
+      icon: 'fa-envelope-o',
+      name: 'Email',
+      url: 'mailto:mariamoralespadron@gmail.com',
+    },
+    {
+      icon: 'fa-codepen',
+      name: 'Codepen',
+      url: 'https://codepen.io/maremarismaria',
+    },
+    ,
+    {
+      icon: 'fa-code',
+      name: 'Porfolio',
+      url: 'https://mariamorales.dev/playground',
+    },
+    {
       icon: 'fa-github',
       name: 'Github',
-      url: 'https://github.com/anubhavsrivastava',
+      url: 'https://github.com/maremarismaria',
     },
     {
       icon: 'fa-twitter',
       name: 'Twitter',
-      url: 'https://twitter.com/onlyanubhav',
+      url: 'https://twitter.com/maremarismaria',
     },
     {
-      icon: 'fa-facebook',
-      name: 'Facebook',
-      url: 'https://facebook.com/theanubhav',
-    },
-    {
-      icon: 'fa-envelope-o',
-      name: 'Email',
-      url: 'mailto:anubhav.srivastava00@gmail.com',
+      icon: 'fa-instagram',
+      name: 'Instagram',
+      url: 'https://www.instagram.com/maremarismaria',
     },
   ],
 };
