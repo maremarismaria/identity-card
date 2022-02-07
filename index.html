@@ -4,50 +4,56 @@ layout: page
 
 <style>
     .whoami {
-        background-color: #BDBDBD;
-        border: 1px solid #FFF;
-        border-right-color: #000;
-        border-bottom-color: #000;
-        padding: 4px;
+        border-radius: 12px;
+        box-shadow: 4px 4px 8px #00000080;
     }
 
     .whoami .header {
-        background-color: #010080;
+        background: linear-gradient(to bottom, #55534C , #40403A);
         color: #FFF;
         font-weight: bold;
-        font-family: "Times New Roman", Times, serif;
-        margin-bottom: 4px;
-        padding: 0 0.2em;
-        font-size: 1.2em;
+        padding: 0.6em;
+        font-size: 0.8em;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-top: thin solid #9c9b93;
+    }
+
+    .whoami .header .title {
+        text-shadow: 1px 1px 1px #000;
     }
 
     .whoami .header .fake-buttons {
         display: grid;
-        grid-template-columns: repeat(3, 20px);
+        grid-template-columns: repeat(3, 18px);
         grid-column-gap: 2px;
+        margin-right: 0.5em;
     }
 
     .whoami .header .fake-buttons button {
         cursor: pointer;
-        width: 20px;
+        width: 18px;
         text-align: center;
         padding: 1px;
-        font-weight: bold;
         margin: 0;
-        background-color: #BDBDBD;
-        border: 1px solid #FFF;
-        border-right-color: #000;
-        border-bottom-color: #000;
+        background: linear-gradient(to bottom, #9c9b93, #6d6c66);
+        border: thin solid #3a3a3a;
+        border-radius: 50%;
+        color: #1a1919;
+    }
+
+    .whoami .header .fake-buttons button.close {
+        background: linear-gradient(to bottom, #dca897, #e05222);
     }
 
     .whoami ul {
         list-style-type: none;
     }
 
-    .whoami ul li {
+    .whoami ul.bio-list li {
         margin-bottom: 0.8em;
     }
 
@@ -56,7 +62,7 @@ layout: page
     .console a:visited,
     .console a:hover,
     .console a:active {
-        color: #00a7a8;
+        color: #FFF;
         background-color: transparent;
         text-decoration: underline;
     }
@@ -69,17 +75,21 @@ layout: page
 
     .console {
         padding: 0.5em;
-        background-color: #000;
-        color: white;
-        font-family: "Lucida Console", "Courier New", monospace;
+        background-color: #1f1f1e;
+        color: #a8a7a5;
+        font-family: 'Ubuntu Mono', monospace;
     }
 
     .command {
         font-weight: bold;
     }
 
-    .console .header-notice {
-        margin: 2em 0;
+    .console .header-notice:first-of-type {
+        margin-bottom: 2em;
+    }
+
+    .console .header-notice:last-of-type {
+        margin-top: 2.5em;
     }
 
     .console .header-notice .command {
@@ -87,9 +97,24 @@ layout: page
         font-size: small;
     }
 
-    .console .header-notice .command.license {
-        margin-left: 1.5em;
-        margin-bottom: 15px;
+    .console .header-notice .command .name {
+        color: darkmagenta;
+    }
+
+    .console .header-notice .command .repo {
+        color: deepskyblue;
+    }
+
+    .console .header-notice .command .branch {
+        color: #a777d4;
+    }
+
+    .console .header-notice .command .versioning {
+        color: indianred;
+    }
+
+    .console .header-notice .command .timestamp {
+        color: darkgreen;
     }
 
     .console .tools {
@@ -99,7 +124,27 @@ layout: page
 
     .console h2 {
         font-size: 1.5em;
-        color: #4caf50;
+        color: #ffc107;
+    }
+
+    .console .ascii-avatar {
+        text-align: center;
+        font-size: 1px;
+        line-height: 1px;
+        white-space: pre;
+    }
+
+    @keyframes pulse-animation {
+        0% {
+            color: currentColor;
+        }
+        100% {
+            color: transparent;
+        }
+    }
+
+    .pulse {
+        animation: pulse-animation 1.2s infinite;
     }
 
 </style>
@@ -107,32 +152,33 @@ layout: page
 <div class="whoami">
 
     <div class="header">
-        <span>🐛 Hello World</span>
         <div class="fake-buttons">
-            <button>_</button>
+            <button class="close">&#10005;</button>
+            <button>&#8210;</button>
             <button>&#9744;</button>
-            <button>&#10005;</button>
         </div>
+        <span class="title">maria@localhost: ~/maremarismaria.githu...</span>
     </div>
 
     <div class="console">
         <div class="header-notice">
-            <p class="command">Merysoft (MIT) Windowa 91</p>
-            <p class="command license">(MIT)License Merysoft Me 1991-2022</p>
-            <p class="command">C:\\WINDOWA>Bug.bat</p>
+            <p class="command"><span class="name">maria</span> in <span class="repo">maremarismaria.github.io</span> on 🌿 <span class="branch">Ubuntu-theme</span> <span class="versioning">[!]</span> via 💎 <span class="versioning">v2.7.0</span></p>
+            <p class="command">⏳ <span class="timestamp">{ 06:49:23 }</span> 🔸 batcat README.md</p>
         </div>
 
-        <h2>> Bio</h2>
+        <h2>> whoami</h2>
 
-        <p>I am María Morales, <strong>Front-End Developer</strong> from Canary Islands, Spain.</p>
-        <ul>
+        {%- include ascii-avatar.html -%}
+
+        <ul class="bio-list">
+            <li>👤  I am María Morales, <strong>Front-End Developer</strong> from Canary Islands, Spain.</li>
             <li> 🏢 I am currently working remotely at <strong>Coded(People) S.L.</strong> as <strong>Lead Front-End Developer</strong></li>
             <li> 📚 I am a <a href="https://www.todofp.es/dam/jcr:7c3d42db-83bf-4abb-9d81-cd4f41fe1a1a/n-tsdesarrolloaplicacionesweben-pdf.pdf" target="_blank" rel="noreferrer">Higher Technician in Development of Web Applications</a>, but I am also <a href="https://en.wikipedia.org/wiki/Philology" target="_blank" rel="noreferrer">Graduated in Spanish Philology</a>, specialized in Contemporary Literature and focused on <a href="https://en.wikipedia.org/wiki/Ram%C3%B3n_G%C3%B3mez_de_la_Serna" target="_blank" rel="noreferrer">Ramón Gómez de la Serna</a></li>
             <li> ⚙️ I use daily <code>.tsx</code>, <code>.ts</code>, <code>.json</code>, <code>.css</code>, <code>.scss</code>, <code>.svg</code> and <code>.njk</code></li>
             <li> 🌱 I would like to know more about <strong>Web Design</strong>, <strong>Clean Code</strong>, <strong>Digital Gardens</strong> and <strong>Computational Linguistics</strong></li>
             <li> 🙋🏼‍♀️ Ping me about <strong>React</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> and <strong>RAMÓN</strong></li>
             <li> 💬 I share interesting stuff about Front-End Development on my channel <a href="https://t.me/stuff_front" target="_blank" rel="noreferrer">Front Stuff</a></li>
-            <li> ❤️ I love Nintendo, the 80's and the tropical house music. I had to say it.</li>
+            <li> ❤️ I love Nintendo, the 80's and the tropical house music. I had to say it!</li>
             <li> ⚡️ Fun fact: I have two pets: <a href="https://en.wikipedia.org/wiki/Null_pointer" target="_blank" rel="noreferrer">Null</a> (cat) and <a href="https://github.com/doodlewind/mocha1995" target="_blank" rel="noreferrer">Mocha</a> (chihuahua)</li>
             <li> 😮 Unexpected fact: I have a small Nokia collection. My top #1 is the model <a href="https://en.wikipedia.org/wiki/Nokia_7600" target="_blank" rel="noreferrer">Nokia 7600</a></li>
             <li> ❓ <i>maremarismaria</i> and The Last Curiosity: my username <i>maremarismaria</i> comes from the Latin noun <i>mare, maris</i> (neuter gender), which means 'Sea'. In a literal manner, <i>mare maris maria</i> means 'the Sea, from the Sea, the Seas'. Poetic, isn't it?</li>
@@ -157,17 +203,16 @@ layout: page
         <h2>> Connect with me</h2>
         <p>Reach me on <a href="https://t.me/maremarismaria" target="_blank" rel="noreferrer">Telegram</a> or visit me via:</p>
         <ul>
+            <li><a href="https://linkedin.com/in/mariamoralespadron" target="_blank" rel="noreferrer">LinkedIn</a></li>
             <li><a href="https://codepen.io/maremarismaria" target="_blank" rel="noreferrer">codepen</a></li>
             <li><a href="https://github.com/maremarismaria" target="_blank" rel="noreferrer">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/mariamoralespadron" target="_blank" rel="noreferrer">LinkedIn</a></li>
             <li><a href="https://twitter.com/maremarismaria" target="_blank" rel="noreferrer">Twitter</a></li>
             <li><a href="https://instagram.com/maremarismaria" target="_blank" rel="noreferrer">Instagram</a></li>
         </ul>
 
-        <p>Cheers and keep coding! 😽</p>
-
         <div class="header-notice">
-            <p class="command">C:\\WINDOWA>_</p>
+            <p class="command"><span class="name">maria</span> in <span class="repo">maremarismaria.github.io</span> on 🌿 <span class="branch">Ubuntu-theme</span> <span class="versioning">[!]</span> via 💎 <span class="versioning">v2.7.0</span></p>
+            <p class="command">⏳ <span class="timestamp">{ 06:49:28 }</span> 🔸 <span>Cheers and keep coding! 😽&nbsp;</span><span class="pulse">_</span></p>
         </div>
     </div>
 </div>
