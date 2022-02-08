@@ -20,10 +20,13 @@
   float: left;
   line-height: $base-line-height * $base-font-size * 1.5;
   text-shadow: 1px 1px 1px #000;
+  text-decoration: none;
 
-  &,
-  &:visited {
-    color: white;
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
   }
 
   @include media-query($on-palm) {
@@ -45,6 +48,14 @@
   .page-link {
     color: white;
     line-height: $base-line-height * $base-font-size * 1.5;
+    text-decoration: none;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -138,6 +149,14 @@
   margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
   color: #c4c4c4;
+
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
 }
 
 .footer-col.name {

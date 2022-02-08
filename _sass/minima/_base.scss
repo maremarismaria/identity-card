@@ -103,18 +103,14 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Links
  */
-a {
-  color: $brand-color;
-  text-decoration: none;
-  transition: color 300ms;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
-
-  &:hover {
-    color: darken($brand-color, 15%);
-  }
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #FFF;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 

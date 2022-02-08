@@ -16,9 +16,7 @@ layout: default
             <p class="command"><span class="name">maria</span> in <span class="repo">maremarismaria.github.io</span> on 🌿 <span class="branch">Ubuntu-theme</span> <span class="versioning">[!]</span> via 💎 <span class="versioning">v2.7.0</span></p>
             <p class="command">⏳ <span class="timestamp">{ 06:49:23 }</span> 🔸 batcat blog.md</p>
         </div>
-
         <h2>> {{ page.list_title | default: "Posts" }}</h2>
-
         {%- if site.posts.size > 0 -%}
         <ul class="post-list">
             {%- for post in site.posts -%}
