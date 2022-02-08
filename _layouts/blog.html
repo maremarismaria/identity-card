@@ -2,12 +2,24 @@
 layout: default
 ---
 
-<div class="home">
+<div class="terminal">
+    <div class="header">
+        <div class="fake-buttons">
+            <button class="close">&#10005;</button>
+            <button>&#8210;</button>
+            <button>&#9744;</button>
+        </div>
+        <span class="title">maria@localhost: ~/blog</span>
+    </div>
+    <div class="console">
+        <div class="console-header">
+            <p class="command"><span class="name">maria</span> in <span class="repo">maremarismaria.github.io</span> on 🌿 <span class="branch">Ubuntu-theme</span> <span class="versioning">[!]</span> via 💎 <span class="versioning">v2.7.0</span></p>
+            <p class="command">⏳ <span class="timestamp">{ 06:49:23 }</span> 🔸 batcat blog.md</p>
+        </div>
 
-    {{ content }}
+        <h2>> {{ page.list_title | default: "Posts" }}</h2>
 
-    {%- if site.posts.size > 0 -%}
-        <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+        {%- if site.posts.size > 0 -%}
         <ul class="post-list">
             {%- for post in site.posts -%}
             <li>
@@ -24,10 +36,6 @@ layout: default
             </li>
             {%- endfor -%}
         </ul>
-    {%- endif -%}
-
-    {%- if false -%}
-        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-    {%- endif -%}
-
+        {%- endif -%}
+    </div>
 </div>

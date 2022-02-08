@@ -114,15 +114,6 @@ a {
 
   &:hover {
     color: darken($brand-color, 15%);
-    text-decoration: underline;
-  }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -153,7 +144,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $border-color;
   border-radius: 3px;
-  background-color: $grey-color-light;
+  background-color: #0F111A;
 }
 
 code {

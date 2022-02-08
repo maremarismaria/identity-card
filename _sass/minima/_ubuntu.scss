@@ -1,0 +1,156 @@
+.terminal {
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px #00000080;
+    background-color: #1f1f1e;
+    min-height: 50vh;
+
+    .header {
+        background: linear-gradient(to bottom, #55534C , #40403A);
+        color: #FFF;
+        font-weight: bold;
+        padding: 0.6em;
+        font-size: 0.8em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-top: thin solid #9c9b93;
+
+        title {
+            text-shadow: 1px 1px 1px #000;
+        }
+
+        .fake-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 18px);
+            grid-column-gap: 2px;
+            margin-right: 0.5em;
+
+            button {
+                cursor: pointer;
+                width: 18px;
+                text-align: center;
+                padding: 1px;
+                margin: 0;
+                background: linear-gradient(to bottom, #9c9b93, #6d6c66);
+                border: thin solid #3a3a3a;
+                border-radius: 50%;
+                color: #1a1919;
+
+                &.close {
+                    background: linear-gradient(to bottom, #dca897, #e05222);
+                }
+            }
+        }
+    }
+
+    ul {
+        list-style-type: none;
+
+        &.bio-list li {
+            margin-bottom: 0.8em;
+        }
+    }
+
+    code {
+        color: #FFF;
+        border-color: #FFF;
+    }
+
+    .console {
+        padding: 0.5em;
+        color: #a8a7a5;
+        font-family: 'Ubuntu Mono', monospace;
+        position: relative;
+        min-height: inherit;
+
+        h1,
+        h2 {
+            color: #ffc107;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        a,
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: #FFF;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        ul.tools {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .ascii-avatar {
+            text-align: center;
+            font-size: 1px;
+            line-height: 1px;
+            white-space: pre;
+        }
+
+
+        .command {
+            font-weight: bold;
+
+            & .name {
+                color: darkmagenta;
+            }
+
+            & .repo {
+                color: deepskyblue;
+            }
+
+            & .branch {
+                color: #a777d4;
+            }
+
+            & .versioning {
+                color: indianred;
+            }
+
+            & .timestamp {
+                color: darkgreen;
+            }
+        }
+
+        .console-header {
+            &:first-of-type {
+                margin-bottom: 2em;
+            }
+
+            &:last-of-type {
+                margin-top: 2.5em;
+            }
+
+            & .command {
+                margin-bottom: 0;
+                font-size: small;
+            }
+        }
+    }
+
+    @keyframes pulse-animation {
+        0% {
+            color: currentColor;
+        }
+        100% {
+            color: transparent;
+        }
+    }
+
+    .pulse {
+        animation: pulse-animation 1.2s infinite;
+    }
+
+    &.post article {
+        font-family: $base-font-family;
+    }
+}

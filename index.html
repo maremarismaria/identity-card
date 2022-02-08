@@ -1,175 +1,23 @@
 ---
-layout: page
+layout: default
 ---
 
-<style>
-    .whoami {
-        border-radius: 12px;
-        box-shadow: 4px 4px 8px #00000080;
-    }
-
-    .whoami .header {
-        background: linear-gradient(to bottom, #55534C , #40403A);
-        color: #FFF;
-        font-weight: bold;
-        padding: 0.6em;
-        font-size: 0.8em;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-        border-top: thin solid #9c9b93;
-    }
-
-    .whoami .header .title {
-        text-shadow: 1px 1px 1px #000;
-    }
-
-    .whoami .header .fake-buttons {
-        display: grid;
-        grid-template-columns: repeat(3, 18px);
-        grid-column-gap: 2px;
-        margin-right: 0.5em;
-    }
-
-    .whoami .header .fake-buttons button {
-        cursor: pointer;
-        width: 18px;
-        text-align: center;
-        padding: 1px;
-        margin: 0;
-        background: linear-gradient(to bottom, #9c9b93, #6d6c66);
-        border: thin solid #3a3a3a;
-        border-radius: 50%;
-        color: #1a1919;
-    }
-
-    .whoami .header .fake-buttons button.close {
-        background: linear-gradient(to bottom, #dca897, #e05222);
-    }
-
-    .whoami ul {
-        list-style-type: none;
-    }
-
-    .whoami ul.bio-list li {
-        margin-bottom: 0.8em;
-    }
-
-    .console a,
-    .console a:link,
-    .console a:visited,
-    .console a:hover,
-    .console a:active {
-        color: #FFF;
-        background-color: transparent;
-        text-decoration: underline;
-    }
-
-    .whoami code {
-        color: #FFF;
-        border-color: #FFF;
-        background-color: transparent;
-    }
-
-    .console {
-        padding: 0.5em;
-        background-color: #1f1f1e;
-        color: #a8a7a5;
-        font-family: 'Ubuntu Mono', monospace;
-    }
-
-    .command {
-        font-weight: bold;
-    }
-
-    .console .header-notice:first-of-type {
-        margin-bottom: 2em;
-    }
-
-    .console .header-notice:last-of-type {
-        margin-top: 2.5em;
-    }
-
-    .console .header-notice .command {
-        margin-bottom: 0;
-        font-size: small;
-    }
-
-    .console .header-notice .command .name {
-        color: darkmagenta;
-    }
-
-    .console .header-notice .command .repo {
-        color: deepskyblue;
-    }
-
-    .console .header-notice .command .branch {
-        color: #a777d4;
-    }
-
-    .console .header-notice .command .versioning {
-        color: indianred;
-    }
-
-    .console .header-notice .command .timestamp {
-        color: darkgreen;
-    }
-
-    .console .tools {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .console h2 {
-        font-size: 1.5em;
-        color: #ffc107;
-    }
-
-    .console .ascii-avatar {
-        text-align: center;
-        font-size: 1px;
-        line-height: 1px;
-        white-space: pre;
-    }
-
-    @keyframes pulse-animation {
-        0% {
-            color: currentColor;
-        }
-        100% {
-            color: transparent;
-        }
-    }
-
-    .pulse {
-        animation: pulse-animation 1.2s infinite;
-    }
-
-</style>
-
-<div class="whoami">
-
+<div class="terminal">
     <div class="header">
         <div class="fake-buttons">
             <button class="close">&#10005;</button>
             <button>&#8210;</button>
             <button>&#9744;</button>
         </div>
-        <span class="title">maria@localhost: ~/maremarismaria.githu...</span>
+        <span class="title">maria@localhost: ~/whoami</span>
     </div>
-
     <div class="console">
-        <div class="header-notice">
+        <div class="console-header">
             <p class="command"><span class="name">maria</span> in <span class="repo">maremarismaria.github.io</span> on 🌿 <span class="branch">Ubuntu-theme</span> <span class="versioning">[!]</span> via 💎 <span class="versioning">v2.7.0</span></p>
             <p class="command">⏳ <span class="timestamp">{ 06:49:23 }</span> 🔸 batcat README.md</p>
         </div>
-
         <h2>> whoami</h2>
-
         {%- include ascii-avatar.html -%}
-
         <ul class="bio-list">
             <li>👤  I am María Morales, <strong>Front-End Developer</strong> from Canary Islands, Spain.</li>
             <li> 🏢 I am currently working remotely at <strong>Coded(People) S.L.</strong> as <strong>Lead Front-End Developer</strong></li>
@@ -183,7 +31,6 @@ layout: page
             <li> 😮 Unexpected fact: I have a small Nokia collection. My top #1 is the model <a href="https://en.wikipedia.org/wiki/Nokia_7600" target="_blank" rel="noreferrer">Nokia 7600</a></li>
             <li> ❓ <i>maremarismaria</i> and The Last Curiosity: my username <i>maremarismaria</i> comes from the Latin noun <i>mare, maris</i> (neuter gender), which means 'Sea'. In a literal manner, <i>mare maris maria</i> means 'the Sea, from the Sea, the Seas'. Poetic, isn't it?</li>
         </ul>
-
         <h2>> Languages and tools</h2>
         <ul class="tools">
             <li>HTML</li>
@@ -199,7 +46,6 @@ layout: page
             <li>Git</li>
             <li>...</li>
         </ul>
-
         <h2>> Connect with me</h2>
         <p>Reach me on <a href="https://t.me/maremarismaria" target="_blank" rel="noreferrer">Telegram</a> or visit me via:</p>
         <ul>
@@ -209,8 +55,7 @@ layout: page
             <li><a href="https://twitter.com/maremarismaria" target="_blank" rel="noreferrer">Twitter</a></li>
             <li><a href="https://instagram.com/maremarismaria" target="_blank" rel="noreferrer">Instagram</a></li>
         </ul>
-
-        <div class="header-notice">
+        <div class="console-header">
             <p class="command"><span class="name">maria</span> in <span class="repo">maremarismaria.github.io</span> on 🌿 <span class="branch">Ubuntu-theme</span> <span class="versioning">[!]</span> via 💎 <span class="versioning">v2.7.0</span></p>
             <p class="command">⏳ <span class="timestamp">{ 06:49:28 }</span> 🔸 <span>Cheers and keep coding! 😽&nbsp;</span><span class="pulse">_</span></p>
         </div>

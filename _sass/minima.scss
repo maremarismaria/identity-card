@@ -10,9 +10,9 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #F4F5F5 !default;
-$background-color: #008081 !default;
-$brand-color:      #050478 !default;
+$text-color:       #fdfdfd !default;
+$background-color: #121212 !default;
+$brand-color:      #005b99 !default;
 $border-color:     #c9c9c9 !default;
 
 $grey-color: #828282 !default;
@@ -48,5 +48,6 @@ $on-laptop:        800px !default;
 @import
   "minima/base",
   "minima/layout",
-  "minima/syntax-highlighting"
+  "minima/syntax-highlighting",
+  "minima/ubuntu"
 ;
