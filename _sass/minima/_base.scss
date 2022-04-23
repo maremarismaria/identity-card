@@ -225,6 +225,8 @@ table {
   color: lighten($text-color, 18%);
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
+  table-layout: fixed;
+  word-wrap: break-word;
   tr {
     &:nth-child(even) {
       background-color: lighten(#1f1f1e, 6%);
